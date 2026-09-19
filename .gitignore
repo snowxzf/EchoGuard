@@ -1,0 +1,21 @@
+# local-only docs (kept on disk, never pushed)
+CIRCUIT.md
+BUILD.md
+NOTES.local.md
+*.local.md
+
+# Arduino / build artifacts
+build/
+*.hex
+*.elf
+*.bin
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
