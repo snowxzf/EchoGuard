@@ -6,8 +6,7 @@ surface, the stronger the feedback. It is built for situations where cameras and
 infrared fail — **blind and low-vision navigation**, and **first responders in
 smoke** — because ultrasonic ranging is immune to darkness and particulate haze.
 
-The firmware targets an **ESP32** and runs with **no external libraries**. A 5 V
-**Arduino Uno** port is included as a fallback.
+The firmware targets an **ESP32** and runs with **no external libraries**.
 
 ---
 
@@ -76,9 +75,7 @@ at **9600**.
   the motor is off, at/below `MIN_DISTANCE_CM` it is at full intensity, linear
   between.
 - **`loop()`** polls each enabled sensor in turn with a `SETTLE_MS` gap (crosstalk
-  guard), drives that zone's motor, and — in buzzer mode — maps the nearest obstacle
+  guard), drives that zone's motor, and when in buzzer mode, maps the nearest obstacle
   to a tone. It prints the per-cycle loop time, which is the sensor-to-feedback
   latency.
 
-The ESP32 and Uno builds share identical logic; only the pin numbers and the 3.3 V
-vs 5 V wiring differ.
